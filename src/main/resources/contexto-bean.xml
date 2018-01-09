@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="Ronaldiño" class="Clases.Jugador">
+<constructor-arg name="nombre" value="Ronaldiño"></constructor-arg>
+<constructor-arg name="apellidos" value="DeAsis Moreira"></constructor-arg>
+<constructor-arg name="nacionalidad" value="Brasileño"></constructor-arg>
+<constructor-arg name="posicion" value="CentroCampista"></constructor-arg>
+<constructor-arg name="dorsal" value="10"></constructor-arg>
+</bean>
+<bean id="Ronaldo" class="Clases.Jugador">
+<constructor-arg name="nombre" value="Ronaldo"></constructor-arg>
+<constructor-arg name="apellidos" value="Nazario"></constructor-arg>
+<constructor-arg name="nacionalidad" value="Brasileño"></constructor-arg>
+<constructor-arg name="posicion" value="Delantero"></constructor-arg>
+<constructor-arg name="dorsal" value="9"></constructor-arg>
+</bean>
+<bean id="Roberto" class="Clases.Jugador">
+<constructor-arg name="nombre" value="Roberto Carlos"></constructor-arg>
+<constructor-arg name="apellidos" value="Da Silva"></constructor-arg>
+<constructor-arg name="nacionalidad" value="Brasileño"></constructor-arg>
+<constructor-arg name="posicion" value="Lateral"></constructor-arg>
+<constructor-arg name="dorsal" value="3"></constructor-arg>
+</bean>
+
+<bean id="equipoBrasil" class="Clases.Equipo">
+<constructor-arg name="nombre" value="Brasil"></constructor-arg>
+<constructor-arg name="categoria" value="Preferente"></constructor-arg>
+<constructor-arg name="pais" value="Brasil"></constructor-arg>
+<constructor-arg name="estadio" value="Maracana"></constructor-arg>
+<constructor-arg name="jugadores">
+<list> 
+<ref bean="Ronaldiño"></ref>
+<ref bean="Ronaldo"></ref>
+<ref bean="Roberto"></ref>
+</list>
+</constructor-arg>
+
+</bean>
+
+</beans>
